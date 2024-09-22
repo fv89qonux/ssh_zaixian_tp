@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="connection.url">jdbc:mysql://127.0.0.1:3306/ssh_zaixian_tp?useSSL=false&amp;serverTimezone=Asia/Shanghai&amp;useUnicode=true&amp;characterEncoding=utf-8</property>
+		<property name="connection.username">ssh_zaixian_tp</property>
+		<property name="connection.password">ssh_zaixian_tp</property>
+		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="myeclipse.connection.profile">ssh_zaixian_tp</property>
+
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+		<property name="connection.autocommit">true</property>
+
+		<property name="hbm2ddl.auto">update</property>
+
+		<mapping resource="com/user/model/Users.hbm.xml" />
+		<mapping resource="com/vote/model/Subject.hbm.xml" />
+		<mapping resource="com/vote/model/Option.hbm.xml" />
+		<mapping resource="com/vote/model/UserOption.hbm.xml" />
+
+	</session-factory>
+</hibernate-configuration>
